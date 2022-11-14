@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>TitleMenuEvents</name>
+    <events>
+        <event-block sid="2444265414414722">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="5563652984020753" type="System" />
+            </conditions>
+            <actions>
+                <action id="0" name="Play" sid="8069588140969955" type="Audio">
+                    <param id="0" name="Audio file">TestTitleMusic</param>
+                    <param id="2" name="Loop">0</param>
+                    <param id="3" name="Volume">-10</param>
+                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="9976394516698209">
+            <conditions>
+                <condition id="-1" name="Every tick" sid="166085552176082" type="System" />
+            </conditions>
+            <actions>
+                <action behavior="8Direction" id="7" name="Simulate control" sid="7158855901364172" type="MenuCamera">
+                    <param id="0" name="Control">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="5971742161751411">
+            <conditions>
+                <condition id="6" name="On object clicked" sid="8191291729993243" type="Mouse">
+                    <param id="0" name="Mouse button">0</param>
+                    <param id="1" name="Click type">0</param>
+                    <param id="2" name="Object clicked">NewGameButton</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-2" name="Go to layout" sid="8347694813982406" type="System">
+                    <param id="0" name="Layout">Chamber1</param>
+                </action>
+                <action id="33" name="Stop all" sid="2052025652550342" type="Audio" />
+            </actions>
+        </event-block>
+        <event-block sid="4756233569288484">
+            <conditions>
+                <condition id="6" name="On object clicked" sid="5302626756220059" type="Mouse">
+                    <param id="0" name="Mouse button">0</param>
+                    <param id="1" name="Click type">0</param>
+                    <param id="2" name="Object clicked">LoadGameButton</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="33" name="Stop all" sid="741742034312837" type="Audio" />
+                <action id="-37" name="Load" sid="5088756308504326" type="System">
+                    <param id="0" name="Slot">&quot;mysave&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>

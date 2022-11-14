@@ -1,0 +1,70 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2uistate>
+    <!--This is a UI state file - its content describes the user interface settings when the project was last open.
+It is entirely optional and the project will load without it.  If you are placing the project under source control,
+you probably do not want to add any .uistate.xml files to the repository.-->
+    <configurations>
+        <active>
+            <configuration name="HTML5" />
+        </active>
+        <display name="HTML5" />
+    </configurations>
+    <open-tabs>
+        <layout order="2">Chamber1</layout>
+        <layout order="4">Chamber2</layout>
+        <layout order="6">TitleMenu</layout>
+        <layout active="1" order="8">Chamber3</layout>
+        <layout order="10">Chamber6</layout>
+        <event-sheet order="1">ControlEvents</event-sheet>
+        <event-sheet order="3">Chamber1Events</event-sheet>
+        <event-sheet order="5">Chamber2Events</event-sheet>
+        <event-sheet order="7">TitleMenuEvents</event-sheet>
+        <event-sheet order="9">Chamber3Events</event-sheet>
+        <event-sheet order="11">Chamber6Events</event-sheet>
+    </open-tabs>
+    <properties>
+        <property expanded="1" name="About" />
+        <property expanded="1" name="Project settings" />
+        <property expanded="0" name="Window Size" />
+        <property expanded="1" name="Configuration Settings" />
+    </properties>
+    <families-expanded root="1" />
+    <folders-expanded>
+        <folder expanded="1" path="object-folder/" />
+        <folder expanded="1" path="layout-folder/" />
+        <folder expanded="1" path="event-folder/" />
+        <folder expanded="1" path="file-folder/" />
+        <folder expanded="1" path="sound-folder/" />
+        <folder expanded="1" path="music-folder/" />
+        <folder expanded="0" path="file-folder/Icons/" />
+        <folder expanded="1" path="animation-folder/WaffleLover/" />
+        <folder expanded="1" path="animation-folder/Sky1/" />
+        <folder expanded="1" path="animation-folder/TNTCounter/" />
+        <folder expanded="1" path="animation-folder/Sky2/" />
+        <folder expanded="1" path="animation-folder/bananaof2015/" />
+        <folder expanded="1" path="animation-folder/Tree/" />
+        <folder expanded="1" path="animation-folder/FadeInEffect/" />
+        <folder expanded="1" path="animation-folder/Sprite/" />
+        <folder expanded="1" path="animation-folder/ChamberText/" />
+        <folder expanded="1" path="animation-folder/LevelOpening/" />
+        <folder expanded="1" path="animation-folder/LevelOpeningWaffle/" />
+        <folder expanded="1" path="animation-folder/MenuCamera/" />
+        <folder expanded="1" path="animation-folder/Sprite2/" />
+        <folder expanded="1" path="animation-folder/Sprite3/" />
+        <folder expanded="1" path="animation-folder/NewGameButton/" />
+        <folder expanded="1" path="animation-folder/LoadGameButton/" />
+        <folder expanded="1" path="animation-folder/Credits/" />
+        <folder expanded="1" path="animation-folder/FlippingPlatform/" />
+        <folder expanded="1" path="animation-folder/Cloud/" />
+        <folder expanded="1" path="animation-folder/ExitTeleporter/" />
+        <folder expanded="1" path="animation-folder/Button1/" />
+        <folder expanded="1" path="animation-folder/Button2/" />
+        <folder expanded="1" path="animation-folder/GravityZone/" />
+        <folder expanded="1" path="animation-folder/Logo/" />
+        <folder expanded="1" path="animation-folder/Sky3/" />
+        <folder expanded="1" path="animation-folder/IronBaby/" />
+        <folder expanded="1" path="animation-folder/IronBabyHitpoint/" />
+        <folder expanded="1" path="animation-folder/Boss1Trigger1/" />
+        <folder expanded="1" path="animation-folder/Boss1Trigger2/" />
+    </folders-expanded>
+</c2uistate>

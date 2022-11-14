@@ -1,0 +1,256 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Chamber6Events</name>
+    <events>
+        <include>ControlEvents</include>
+        <event-block sid="2586021416007641">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="5446830585454135" type="System" />
+            </conditions>
+            <actions>
+                <action id="0" name="Play" sid="1196635177598239" type="Audio">
+                    <param id="0" name="Audio file">TestBossMusic</param>
+                    <param id="2" name="Loop">1</param>
+                    <param id="3" name="Volume">0</param>
+                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                </action>
+                <action behavior="Pin" id="0" name="Pin to object" sid="9296217343554714" type="IronBabyHitpoint">
+                    <param id="0" name="Pin to">IronBaby</param>
+                    <param id="1" name="Mode">0</param>
+                </action>
+                <action id="-36" name="Save" sid="8677782622214995" type="System">
+                    <param id="0" name="Slot">&quot;mysave&quot;</param>
+                </action>
+                <action id="0" name="Set text" sid="8066850602661511" type="ChamberNumber">
+                    <param id="0" name="Text">ChamberNumber</param>
+                </action>
+                <action id="-16" name="Wait" sid="7158644399886818" type="System">
+                    <param id="0" name="Seconds">2.0</param>
+                </action>
+                <action id="4" name="Set animation" sid="1627974213280053" type="FadeInEffect">
+                    <param id="0" name="Animation">&quot;FadeIn&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+                <action id="4" name="Set animation" sid="523054832433181" type="ChamberText">
+                    <param id="0" name="Animation">&quot;Animation2&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+                <action id="4" name="Set animation" sid="2519670393622614" type="LevelOpening">
+                    <param id="0" name="Animation">&quot;MoveOut&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+                <action id="4" name="Set animation" sid="1049512145770965" type="LevelOpeningWaffle">
+                    <param id="0" name="Animation">&quot;GoOut&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+                <action id="-9" name="Destroy" sid="1015972644076504" type="ChamberNumber" />
+            </actions>
+        </event-block>
+        <event-group description="" sid="4255092749735045" title="Boss1Events">
+            <sub-events>
+                <event-block sid="4275447504679381">
+                    <conditions>
+                        <condition behavior="Platform" id="9" name="On landed" sid="298010613148964" type="WaffleLover" />
+                        <condition behavior="Platform" id="0" inverted="1" name="Is moving" sid="1649675040091003" type="IronBaby" />
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="3803724497526486" type="IronBaby">
+                            <param id="0" name="Animation">&quot;Idle&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="7094829000584872">
+                    <conditions>
+                        <condition behavior="Platform" id="5" name="On jump" sid="8038677217856303" type="WaffleLover" />
+                        <condition behavior="Platform" id="0" inverted="1" name="Is moving" sid="5481287380331033" type="IronBaby" />
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="8542112861255167" type="IronBaby">
+                            <param id="0" name="Animation">&quot;Lift&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="3511706734089088">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="392533994986041" type="WaffleLover">
+                            <param id="0" name="Instance variable">IsJumping</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                        <condition behavior="Platform" id="0" inverted="1" name="Is moving" sid="291658560843761" type="IronBaby" />
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="1205150288273065" type="IronBaby">
+                            <param id="0" name="Animation">&quot;Lift&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="8147967354654311">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="2076451732558802" type="WaffleLover">
+                            <param id="0" name="Object">IronBaby</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="ScrollTo" id="1" name="Set enabled" sid="231891839693653" type="WaffleLover">
+                            <param id="0" name="State">0</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="9381581411390997" type="WaffleLover">
+                            <param id="0" name="Animation">&quot;Death&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action behavior="Platform" id="11" name="Set enabled" sid="3936457644043161" type="WaffleLover">
+                            <param id="0" name="State">0</param>
+                        </action>
+                        <action behavior="Sine" id="0" name="Set active" sid="3845608506214971" type="WaffleLover">
+                            <param id="0" name="State">1</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="5854013121992141" type="System">
+                            <param id="0" name="Seconds">2.0</param>
+                        </action>
+                        <action id="-26" name="Restart layout" sid="5652309559235186" type="System" />
+                    </actions>
+                </event-block>
+                <event-block sid="6582077763264116">
+                    <conditions>
+                        <condition behavior="Platform" id="8" name="On moved" sid="4511785504430935" type="IronBaby" />
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="2875118412496161" type="IronBaby">
+                            <param id="0" name="Animation">&quot;Move&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="590020522163723">
+                    <conditions>
+                        <condition behavior="Platform" id="7" name="On stopped" sid="3934373771684915" type="IronBaby" />
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="1163389046633142" type="IronBaby">
+                            <param id="0" name="Animation">&quot;Idle&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="7628106899960106">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="653972324381474" type="WaffleLover">
+                            <param id="0" name="Object">IronBabyHitpoint</param>
+                        </condition>
+                        <condition behavior="Platform" id="3" name="Is jumping" sid="2144933062134305" type="WaffleLover" />
+                        <condition behavior="Platform" id="0" inverted="1" name="Is moving" sid="5564418216942937" type="IronBaby" />
+                    </conditions>
+                    <actions>
+                        <action id="-12" name="Subtract from" sid="2846029076216527" type="IronBaby">
+                            <param id="0" name="Instance variable">Health</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="7674961086028877">
+                            <conditions>
+                                <condition behavior="Platform" id="10" name="Is by wall" sid="7084655808588239" type="WaffleLover">
+                                    <param id="0" name="Side">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action behavior="Platform" id="8" name="Set vector X" sid="7649080633500026" type="WaffleLover">
+                                    <param id="0" name="Vector X">700</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="62534689156579">
+                            <conditions>
+                                <condition behavior="Platform" id="10" name="Is by wall" sid="9496984951670014" type="WaffleLover">
+                                    <param id="0" name="Side">1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action behavior="Platform" id="8" name="Set vector X" sid="6027018115956364" type="WaffleLover">
+                                    <param id="0" name="Vector X">-700</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="7385277460008402" title="Boss1Controls">
+            <sub-events>
+                <event-block sid="1953793626312277">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="2798235141414615" type="IronBaby">
+                            <param id="0" name="Object">Boss1Trigger1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Set value" sid="967365060535765" type="IronBaby">
+                            <param id="0" name="Instance variable">Move</param>
+                            <param id="1" name="Value">2</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="4248525492463784">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="615573347556378" type="IronBaby">
+                            <param id="0" name="Object">Boss1Trigger2</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Set value" sid="1065492467348529" type="IronBaby">
+                            <param id="0" name="Instance variable">Move</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="8688840069708036">
+                    <conditions>
+                        <condition id="-1" name="Every tick" sid="2000574043666137" type="System" />
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="1979418819763817">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="540639033327767" type="IronBaby">
+                                    <param id="0" name="Instance variable">Move</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action behavior="Platform" id="7" name="Simulate control" sid="3368902210250452" type="IronBaby">
+                                    <param id="0" name="Control">0</param>
+                                </action>
+                                <action id="7" name="Set mirrored" sid="1951057586421925" type="IronBaby">
+                                    <param id="0" name="State">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="7882990888234926">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="6500619750271414" type="IronBaby">
+                                    <param id="0" name="Instance variable">Move</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">2</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action behavior="Platform" id="7" name="Simulate control" sid="9046069765460133" type="IronBaby">
+                                    <param id="0" name="Control">1</param>
+                                </action>
+                                <action id="7" name="Set mirrored" sid="4711598771104225" type="IronBaby">
+                                    <param id="0" name="State">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
+    </events>
+</c2eventsheet>

@@ -1,0 +1,80 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Chamber3Events</name>
+    <events>
+        <include>ControlEvents</include>
+        <event-block sid="7593453390189299">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="2120040121190408" type="System" />
+            </conditions>
+            <actions>
+                <action id="-36" name="Save" sid="9144302555848442" type="System">
+                    <param id="0" name="Slot">&quot;mysave&quot;</param>
+                </action>
+                <action id="0" name="Set text" sid="2070511651827232" type="ChamberNumber">
+                    <param id="0" name="Text">ChamberNumber</param>
+                </action>
+                <action id="0" name="Play" sid="3866702773297255" type="Audio">
+                    <param id="0" name="Audio file">TestMusic2</param>
+                    <param id="2" name="Loop">1</param>
+                    <param id="3" name="Volume">0</param>
+                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                </action>
+                <action id="-16" name="Wait" sid="3666389500421654" type="System">
+                    <param id="0" name="Seconds">2.0</param>
+                </action>
+                <action id="4" name="Set animation" sid="7852020234339077" type="FadeInEffect">
+                    <param id="0" name="Animation">&quot;FadeIn&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+                <action id="4" name="Set animation" sid="856334077050791" type="ChamberText">
+                    <param id="0" name="Animation">&quot;Animation2&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+                <action id="4" name="Set animation" sid="4794299755374815" type="LevelOpening">
+                    <param id="0" name="Animation">&quot;MoveOut&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+                <action id="4" name="Set animation" sid="7080306800060921" type="LevelOpeningWaffle">
+                    <param id="0" name="Animation">&quot;GoOut&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+                <action id="-9" name="Destroy" sid="6444178459822095" type="ChamberNumber" />
+            </actions>
+        </event-block>
+        <event-block sid="9719233851468219">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="9631065137406869" type="WaffleLover">
+                    <param id="0" name="Object">ExitTeleporter</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-16" name="Wait" sid="2299768543164987" type="System">
+                    <param id="0" name="Seconds">0.1</param>
+                </action>
+                <action id="4" name="Set animation" sid="7964008712338277" type="WaffleLover">
+                    <param id="0" name="Animation">&quot;LevelComplete&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+                <action id="-16" name="Wait" sid="8157315589923361" type="System">
+                    <param id="0" name="Seconds">0.3</param>
+                </action>
+                <action behavior="Platform" id="11" name="Set enabled" sid="6068979082960774" type="WaffleLover">
+                    <param id="0" name="State">0</param>
+                </action>
+                <action id="-16" name="Wait" sid="1313887156189735" type="System">
+                    <param id="0" name="Seconds">3.0</param>
+                </action>
+                <action id="33" name="Stop all" sid="3428152685025642" type="Audio" />
+                <action id="-2" name="Go to layout" sid="7492762179249484" type="System">
+                    <param id="0" name="Layout">TitleMenu</param>
+                </action>
+                <action id="-10" name="Add to" sid="6608842636856282" type="System">
+                    <param id="0" name="Variable">ChamberNumber</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>
